@@ -4,7 +4,7 @@ import sys
 class Tabulka:
     def __init__(self, n:int) -> None:
         self.n = n
-        
+
     def mapovani2D(self, linearniPozice:int):
         a = linearniPozice - 1       # odecteme jedna aby fungavala matika a indexovani od nuly
         pozice, cislo = 0, 0
@@ -100,7 +100,7 @@ class Vyrok:
                 self.formule.append(self.tabulka.linearniMapovani(doleva, cislo))
                 self.formule.append(self.tabulka.linearniMapovani(doprava, cislo))
                 self.formule.append(self.konec)
-                self.pocetKlauzuli += 1         #HACK pocet klauzuli si taklhe udrzovat je debilni
+                self.pocetKlauzuli += 1         #HACK pocet klauzuli si taklhe udrzovat je spatne
 
             # na levo
             elif ((doleva) >= 0):
@@ -151,5 +151,3 @@ def main(argv):
 
 if __name__ == "__main__":
     main(sys.argv[1:])
-
-

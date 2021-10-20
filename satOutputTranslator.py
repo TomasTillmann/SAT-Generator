@@ -12,23 +12,41 @@ class Tabulka:
         cislo = (a % self.n) + 1      # samotna cisla (vyroky) na pozici indexujeme od 1
         
         return (pozice, cislo)
-    
-    def linearniMapovani(self, pozice:int, cislo:int):
-        return (pozice * self.n) + cislo
 
 class Reader:
-    def getSequence(filename:str):
-        pass
+    def __init__(self, upperBound:int, fileName:str):
+        self.upperBound = upperBound
+        self.fileName = fileName
+
+    def printSequences(self):
+        for n in range(1, self.upperBound + 1):
+            table = Tabulka(n)
+            sequence = []
+            file = open(f"{self.fileName}{n}.txt")
+            # first line is useless
+            line = file.readline()
+            line = file.readline().split(" ")
+            try:
+                line = [int(x) for x in line]
+            except ValueError:
+                continue
+
+
+            for i in range(len(line)):
+                # non negative, hence true in sat langugage
+                if (line[i] > 0):
+                    pozice, cislo = table.mapovani2D(line[i])
+                    sequence.append(cislo)
+            print(f"Pro n = {n}:", end=" ")
+            print(*sequence, end=" ")
+            print()
 
 
 def main():
     # could be potentially changed by user by command line
-    upperBound = 10
-    fileName = "satOutput"
-    for n in range(1, upperBound + 1):
-        file = open(f"{fileName}{n}.txt")
+    reader = Reader(10, "satOutput")
+    reader.printSequences()
 
-    pass
 
 
 if (__name__ == '__main__'):
