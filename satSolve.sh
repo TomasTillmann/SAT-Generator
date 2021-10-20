@@ -1,5 +1,5 @@
 #!/bin/bash
-satGenerator="ukol2.py"
+satGenerator="satGenerator.py"
 upperBound="10"
 satSolver="minisat"
 

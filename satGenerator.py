@@ -4,7 +4,7 @@ import sys
 class Tabulka:
     def __init__(self, n:int) -> None:
         self.n = n
-        pass
+        
     def mapovani2D(self, linearniPozice:int):
         a = linearniPozice - 1       # odecteme jedna aby fungavala matika a indexovani od nuly
         pozice, cislo = 0, 0
