@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import sys
 
 class Tabulka:
@@ -91,15 +90,17 @@ class Vyrok:
 
 
 def main(argv):
-    # vstup
+    n = int(argv[0])
+
     if(len(argv) != 1):
-        print("Wrong arguments count.")
+        print("Wrong arguments count. Value must be one number between 1 and 10")
         return -1
 
-    n = argv[0] 
+    if (n <= 0 or n > 10):
+        print("Wrong value. Value must be between 1 and 10")
+        return -2
 
-    vyrok = Vyrok(int(n))
-
+    vyrok = Vyrok(n)
     vyrok.jednoCisloNaJednePozici()
     vyrok.dveCislaMax()
     vyrok.vzdalenosti()
