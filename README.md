@@ -8,3 +8,7 @@ Solve for n≤10.
 # Zadání
 Převeďte na CNF a vyřešte pomocí (některého) SAT solveru:  Rozhodněte, zda dvě množiny {1,...,n} jdou uspořádat do posloupnosti délky 2n tak, že vzdálenost mezi čísly k je právě k.  
 Vyřešte pro n≤10.
+
+# Example
+* for n = 4
+* 4 2 3 2 4 3 1 1
