@@ -1,5 +1,7 @@
 # About
-Little script for generating SAT formulas, that are in valid format to be solved for SAT solvers. Generated SAT formulas are logically equivalent to the problem down below.
+Little script for generating SAT formulas, that are in valid format to be solved for SAT solvers. Generated SAT formulas are logically equivalent to the problem down below. 
+
+Generating script is satGenerator.py.
 
 # Problem
 Convert this problem to CNF and solve by using a SAT solver: Decide, whether two sets {1,...n} can be arranged in a sequence of length 2n, such as distance between numbers k is exactly k.
